@@ -2,8 +2,6 @@ const sliderSections = document.querySelectorAll('.section-slider');
 
 
 sliderSections.forEach((element) => {
-
-    
     // Constants
     const   sliderContainer = element.querySelector('.slider-container'),
             slides = element.querySelectorAll('.slide'),
@@ -15,10 +13,12 @@ sliderSections.forEach((element) => {
         indexButton = 0,
         counter;
     // Functions
-    const changeSlide = (index=-1) => {
+    const changeSlide = (index = -10) => {
+
+
         slides[indexButton].style.opacity='0';
         buttons[indexButton].classList.remove('slider__button--selected');
-        if (index == -1) {
+        if (index == -10) {
             if (indexButton == buttons.length - 1) {
                 indexButton = 0;
             } else {
@@ -29,6 +29,8 @@ sliderSections.forEach((element) => {
         }
         slides[indexButton].style.opacity='1';
         buttons[indexButton].classList.add('slider__button--selected');
+
+
     };
     const selectedDirection = (start, end) => {
         if ((end - start) > 0) {
@@ -82,7 +84,5 @@ sliderSections.forEach((element) => {
     slides[indexButton].style.opacity='1';
     buttons[indexButton].classList.add('slider__button--selected');
     counter = setInterval(changeSlide, deltaTime)
-
-
 });
 
