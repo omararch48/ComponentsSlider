@@ -8,13 +8,15 @@ html(lang="en")
         title Slider
     body 
         main 
+            h1 Sliders
+            h2 Ejemplos de sliders automatizados
             section.section-slider 
                 .slider-container 
                     ul.slider 
                         li.slide: img(src="img/jpg/auto1.jpg")
                         li.slide: img(src="img/jpg/auto2.jpg")
                         li.slide: img(src="img/jpg/auto3.jpg")
-                        li.slide.op
+                        li.slide.slide-text
                             .slide-information
                                 h3 Título del Slide 
                                 p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam placeat, dolores porro ipsa assumenda ut? Culpa quaerat alias numquam!
@@ -35,7 +37,7 @@ html(lang="en")
                         li.slide: img(src="img/jpg/auto1.jpg")
                         li.slide: img(src="img/jpg/auto2.jpg")
                         li.slide: img(src="img/jpg/auto3.jpg")
-                        li.slide.op
+                        li.slide.slide-text
                             .slide-information
                                 h3 Título del Slide 
                                 p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam placeat, dolores porro ipsa assumenda ut? Culpa quaerat alias numquam!
@@ -49,4 +51,4 @@ html(lang="en")
                         .slider__button
                         .slider__button
                         .slider__button
-        script(src="js/slider.js")
+        script(src="js/index.js", type="module")
